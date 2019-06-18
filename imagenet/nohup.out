@@ -1,0 +1,16 @@
+valiating alpha=0.1
+=> using pre-trained model 'resnet50'
+Traceback (most recent call last):
+  File "main.py", line 420, in <module>
+    main()
+  File "main.py", line 113, in main
+    main_worker(args.gpu, ngpus_per_node, args)
+  File "main.py", line 227, in main_worker
+    normalize,
+  File "/home/chengbin/anaconda3/envs/t4/lib/python3.6/site-packages/torchvision/datasets/folder.py", line 178, in __init__
+    target_transform=target_transform)
+  File "/home/chengbin/anaconda3/envs/t4/lib/python3.6/site-packages/torchvision/datasets/folder.py", line 75, in __init__
+    classes, class_to_idx = find_classes(root)
+  File "/home/chengbin/anaconda3/envs/t4/lib/python3.6/site-packages/torchvision/datasets/folder.py", line 23, in find_classes
+    classes = [d for d in os.listdir(dir) if os.path.isdir(os.path.join(dir, d))]
+FileNotFoundError: [Errno 2] No such file or directory: '/data/chengbin/attack0.5_style/image_origin0.1/val'
